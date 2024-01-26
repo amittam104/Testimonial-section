@@ -11,28 +11,46 @@ html {
 
 body {
   font-family: "League Spartan", sans-serif;
+  position: relative;
+}
+
+.bkg {
+  position: absolute;
+  /* display: none; */
 }
 
 .container {
   height: 100vh;
-  position: relative;
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
 }
 
 .lower-bg {
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  right: 0;
+  right: 0; */
+  /* display: none; */
+}
+
+.upper-bg {
+  /* display: none; */
 }
 
 /* Entire Testimonial Section */
 .testimonial-section {
-  position: absolute;
-  left: 50%;
+  /* position: absolute; */
+  /* left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 105rem;
-  display: grid;
-  grid-template-columns: 1fr;
+  transform: translate(-50%, -50%); */
+  /* height: 100vh; */
+  margin: 0 auto;
+  max-width: 110rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  /* grid-template-columns: 1fr; */
 }
 
 /* Upper Section */
@@ -40,7 +58,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   /* gap: 10rem; */
 }
 
@@ -160,43 +178,136 @@ body {
 }
 
 @media (max-width: 375px) {
-  .container {
-    height: 100vh;
-    position: static;
-  }
-
-  .upper-bg {
-    position: static;
-  }
-
-  .lower-bg {
-    position: static;
-  }
-
-  .testimonial-section {
-    position: static;
-    left: 0;
-    top: 0;
-    transform: translate(0, 0);
-    max-width: 34rem;
-    display: flex;
-    flex-direction: column;
+  body {
+    font-family: "League Spartan", sans-serif;
+    /* position: relative; */
   }
 
   .upper-section {
-    display: flex;
+    font-family: "League Spartan", sans-serif;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    /* gap: 10rem; */
+    margin-bottom: 5rem;
   }
 
   .lower-section {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .container {
+    font-family: "League Spartan", sans-serif;
+    height: none;
+  }
+
+  .testimonial-section {
+    /* position: absolute; */
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 33rem;
+    display: flex;
+    flex-direction: column;
+    /* margin: 10% auto; */
+    /* align-items: center;
+    justify-content: center; */
+    /* grid-template-columns: 1fr; */
+  }
+
+  .header-box {
+    font-family: "League Spartan", sans-serif;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3.8rem;
+  }
+
+  .header {
+    font-family: "League Spartan", sans-serif;
+    text-align: center;
+    width: 100%;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 0.8;
+    letter-spacing: -1.5px;
+    color: hsl(300, 43%, 22%);
+    margin-bottom: 2.4rem;
+  }
+
+  .header-text {
+    font-family: "League Spartan", sans-serif;
+
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    color: hsl(300, 43%, 22%);
+    line-height: 1.6;
+  }
+  .testimonial-box {
+    background-color: hsl(300, 43%, 22%);
+    color: #fff;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    width: 100%;
+    border-radius: 0.6rem;
+  }
+
+  .ratings {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 2.8rem;
+    width: 100%;
+    gap: 1.6rem;
+  }
+
+  .rating-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: hsl(300, 24%, 96%);
+    /* padding: 1.2rem 7rem; */
+    border-radius: 0.4rem;
+  }
+
+  .rating-bar--1 {
+    width: 100%;
+    padding: 1.2rem 6rem;
+  }
+
+  .rating-bar--2 {
+    margin-left: 0;
+    width: 100%;
+    padding: 1.2rem 6rem;
+  }
+
+  .rating-bar--3 {
+    margin-left: 0;
+    width: 100%;
+    padding: 1.2rem 6rem;
+  }
+
+  .testimonial-box--2 {
+    margin-top: 0.2rem;
+  }
+
+  .testimonial-box--3 {
+    margin-top: 0.2rem;
+    margin-bottom: 10rem;
+  }
+
+  .five-stars {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .star-icon {
+    width: 1.5rem;
+  }
+  .bkg {
+    position: absolute;
+    display: none;
   }
 }
